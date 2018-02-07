@@ -11,6 +11,6 @@ Uses the "Movie Database" API in order to display the most popular movies.
 * Watch trailers
 * Read info about the movies
 
-* Save favorite movies locally to view them even when offline (Coming soon)
-* Read reviews (Coming soon)
+* Save favorite movies locally to view them even when offline (Coming Soon)
+* Read reviews (Coming Soon)
 
