@@ -1,0 +1,83 @@
+
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.tikal"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
+        buildConfigField("String", "BASE_IMAGE_URL", "\"https://image.tmdb.org/t/p/w\"")
+        buildConfigField("String", "API_KEY", "\"b20df0573d44a6d92d224fc815279bc3\"")
+
+
+    }
+    realm {
+        syncEnabled = true;
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+ext {
+    constraintLibraryVersion = '1.0.2'
+    supportLibraryVersion = '27.0.2'
+    androidAnnotations = '4.4.0'
+    parcel = '1.1.9'
+    retrofit = '2.3.0'
+    retrofitRxJava = '1.0.0'
+    okhttp = '3.9.0'
+    gson = '2.8.2'
+    picasso = '2.5.2'
+    rxAndroid = '2.0.1'
+    stateful = '1.2.1'
+}
+
+dependencies {
+
+    //Support library version
+    implementation "com.android.support:cardview-v7:$supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:support-v4:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLibraryVersion"
+
+    //Android annotations
+    annotationProcessor "org.androidannotations:androidannotations:$androidAnnotations"
+    implementation "org.androidannotations:androidannotations-api:$androidAnnotations"
+    implementation "org.parceler:parceler-api:$parcel"
+    annotationProcessor "org.parceler:parceler:$parcel"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$picasso"
+
+    //RxAndroid
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+
+    //Retrofit 2
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$retrofitRxJava"
+
+    //Okhttp3
+    implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
+
+    //Stateful
+    implementation "com.github.gturedi:stateful-layout:$stateful"
+}
