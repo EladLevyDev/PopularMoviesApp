@@ -28,5 +28,3 @@ Uses the "Movie Database" API in order to display the most popular movies.
 * [Picasso](https://github.com/square/picasso)
 * [Gradle Retrolambda Plugin](https://github.com/evant/gradle-retrolambda)
 
-
-
