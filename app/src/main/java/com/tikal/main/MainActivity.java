@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
     @ViewById(R.id.toolbar)
     Toolbar mToolbar;
 
-    MoviesAdapter mMoviesAdapter;
-
+    // Values
+    private MoviesAdapter mMoviesAdapter;
     private boolean mTwoPanel;
 
     @AfterViews
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     private void buildUI() {
         setSupportActionBar(mToolbar);
-        mToolbar.setTitle("Top Movies");
+        mToolbar.setTitle(R.string.top_movies);
 
         if (findViewById(R.id.movieDetailsFragment) != null) {
             mTwoPanel = true;
@@ -66,9 +66,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
         mRecyclerView.setLayoutManager(gridLayoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setAdapter(mMoviesAdapter);
-
-        // OnCreate remove ,
-        // app in mobile
     }
 
     private void loadData() {

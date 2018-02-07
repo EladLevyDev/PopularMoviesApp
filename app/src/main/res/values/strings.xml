@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Top Movies</string>
+    <string name="top_movies">Top Movies</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="title_movie_detail">Movie Details</string>
-    <string name="top_movies">Top Movies</string>
     <string name="movie_detail_trailers">Trailers</string>
     <string name="movie_details_rating">Average rating: %1$s</string>
+
 </resources>

@@ -24,12 +24,11 @@ public class MovieInteractor {
 
     @Bean
     ReposModule mReposModule;
-    ;
-
 
     public MovieInteractor(Context context) {
 
     }
+
 
     public Observable<TrailersResponse> loadTrailers(String movieId) {
         return mNetwork.api().getTrailersResponse(movieId, BuildConfig.API_KEY);

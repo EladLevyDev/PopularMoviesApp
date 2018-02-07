@@ -24,7 +24,6 @@ public class MainInteractor {
 
     @Bean
     ReposModule mReposModule;
-    ;
 
     public MainInteractor(Context context) {
     }
@@ -32,6 +31,7 @@ public class MainInteractor {
     /*
         Server API Call
      */
+
     public Observable<MoviesResponse> getMoviesFromServer() {
         return mNetwork.api().getTopMoviesResponse(BuildConfig.API_KEY);
     }

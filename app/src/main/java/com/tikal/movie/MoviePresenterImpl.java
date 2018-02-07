@@ -23,7 +23,6 @@ public class MoviePresenterImpl implements MoviePresenter {
     private Disposable mDisposable;
 
     public MoviePresenterImpl(Context context) {
-
     }
 
     public void setView(MovieView view) {

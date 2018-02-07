@@ -50,9 +50,12 @@ public class MovieDetailsFragment extends Fragment implements MovieView {
     TextView mMovieRating;
     @ViewById(R.id.recyclerViewTrailers)
     RecyclerView mMovieTrailersRecyclerView;
+
+    // Values
     private Movie mMovie;
     private boolean mTwoPanelMode;
 
+    // Constructor
     public static MovieDetailsFragment newInstance(Movie movie, boolean twoPanelMode) {
         return MovieDetailsFragment_.builder()
                 .setMovieArg(movie)
@@ -73,7 +76,6 @@ public class MovieDetailsFragment extends Fragment implements MovieView {
     @AfterViews
     void afterViews() {
         mPresenter.setView(this);
-        //setHasOptionsMenu(true);
         buildPanelMode();
         buildUI();
 
